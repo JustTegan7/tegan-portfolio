@@ -52,12 +52,54 @@ window.addEventListener('scroll', () => {
 onScroll();
 
 // ── SCROLL REVEAL ───────────────────────────────────────
+// Cards inside a grid cascade in, with slightly uneven gaps so it feels natural.
+document.querySelectorAll('.proj-grid, .exp-grid, .reviews-grid, .about-cards, .edu-grid, .content-grid, .skills-grid').forEach(grid => {
+  [...grid.children].filter(c => c.classList.contains('reveal')).forEach((card, i) => {
+    card.style.transitionDelay = `${i * 70 + (i % 2) * 20}ms`;
+  });
+});
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    el.classList.add('in');
+    io.unobserve(el);
+    // Once it has landed, drop the delay so hover effects respond instantly
+    setTimeout(() => { el.style.transitionDelay = '0s'; el.classList.remove('d1', 'd2', 'd3', 'd4'); }, 1600);
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+
+// ── CURSOR SPOTLIGHT ON CARDS (mouse only) ──────────────
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  document.querySelectorAll('.acard, .pcard, .ecard, .review-card, .content-card, .educ').forEach(card => {
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      card.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  });
+}
+
+// ── HERO GLOW DRIFT (pointer + scroll) ──────────────────
+const glow1 = document.querySelector('.hero-glow');
+const glow2 = document.querySelector('.hero-glow2');
+if (!reduceMotion && glow1 && glow2) {
+  let px = 0, py = 0;
+  const drift = () => {
+    const s = Math.min(window.scrollY, 900);
+    glow1.style.transform = `translate3d(${px * 40}px, ${py * 30 + s * 0.25}px, 0)`;
+    glow2.style.transform = `translate3d(${px * -30}px, ${py * -20 - s * 0.12}px, 0)`;
+  };
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.getElementById('hero').addEventListener('pointermove', e => {
+      px = e.clientX / window.innerWidth - 0.5;
+      py = e.clientY / window.innerHeight - 0.5;
+      requestAnimationFrame(drift);
+    });
+  }
+  window.addEventListener('scroll', () => { if (window.scrollY < 1000) requestAnimationFrame(drift); }, { passive: true });
+}
 
 // ── SKILL BARS ──────────────────────────────────────────
 const bio = new IntersectionObserver(entries => {
