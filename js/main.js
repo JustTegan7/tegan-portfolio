@@ -1,63 +1,65 @@
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 // ── HAMBURGER / MOBILE NAV ──────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  mobileNav.classList.toggle('open');
-  document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-});
+const setMenu = (open) => {
+  hamburger.classList.toggle('open', open);
+  mobileNav.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', String(open));
+  hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  document.body.style.overflow = open ? 'hidden' : '';
+};
 
-document.querySelectorAll('.mob-link').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileNav.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-});
+hamburger.addEventListener('click', () => setMenu(!mobileNav.classList.contains('open')));
+document.querySelectorAll('.mob-link').forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
 // ── SMOOTH SCROLL ───────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     const target = document.querySelector(this.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
     const top = target.getBoundingClientRect().top + window.scrollY - 72;
-    window.scrollTo({ top, behavior: 'smooth' });
+    window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
   });
 });
 
-// ── ACTIVE NAV HIGHLIGHT ────────────────────────────────
+// ── NAV STATE, ACTIVE LINK, SCROLL PROGRESS (one rAF-throttled handler) ──
+const nav = document.getElementById('siteNav');
+const progress = document.getElementById('scrollProgress');
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
+let ticking = false;
 
-const activateLink = () => {
+const onScroll = () => {
+  const y = window.scrollY;
+  nav.classList.toggle('scrolled', y > 60);
+
   let current = '';
-  sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
-  });
-  navLinks.forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-  });
-};
-window.addEventListener('scroll', activateLink, { passive: true });
-activateLink();
+  sections.forEach(sec => { if (y >= sec.offsetTop - 140) current = sec.id; });
+  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
 
-// ── NAV SHRINK ON SCROLL ────────────────────────────────
-const nav = document.querySelector('nav');
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  if (progress) progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+  ticking = false;
+};
 window.addEventListener('scroll', () => {
-  nav.style.padding = window.scrollY > 60 ? '.8rem 5rem' : '1.2rem 5rem';
+  if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
 }, { passive: true });
+onScroll();
 
 // ── SCROLL REVEAL ───────────────────────────────────────
-const reveals = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-}, { threshold: 0.12 });
-reveals.forEach(r => io.observe(r));
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(r => io.observe(r));
 
 // ── SKILL BARS ──────────────────────────────────────────
-const bars = document.querySelectorAll('.skill-fill');
 const bio = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -66,31 +68,37 @@ const bio = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.3 });
-bars.forEach(b => bio.observe(b));
+document.querySelectorAll('.skill-fill').forEach(b => bio.observe(b));
 
 // ── COUNT-UP STATS ──────────────────────────────────────
-const nums = document.querySelectorAll('.stat-num[data-target]');
-const nio = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const target = +e.target.dataset.target;
-      let cur = 0;
-      const inc = target / 40;
-      const t = setInterval(() => {
-        cur += inc;
-        if (cur >= target) { cur = target; clearInterval(t); }
-        e.target.textContent = Math.round(cur) + (target > 1 ? '+' : '');
-      }, 40);
-      nio.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.5 });
-nums.forEach(n => nio.observe(n));
+// The real number is already in the HTML, so anyone without JS (or with
+// reduced motion) sees it. With JS we count up to it with an ease-out curve.
+const easeOut = t => 1 - Math.pow(1 - t, 3);
+const countUp = el => {
+  const target = +el.dataset.target;
+  const suffix = el.dataset.suffix || '';
+  const duration = 1100;
+  const start = performance.now();
+  const step = now => {
+    const t = Math.min((now - start) / duration, 1);
+    el.textContent = Math.round(easeOut(t) * target) + (t === 1 ? suffix : '');
+    if (t < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+};
+if (!reduceMotion) {
+  const nio = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { countUp(e.target); nio.unobserve(e.target); }
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.stat-num[data-target]').forEach(n => nio.observe(n));
+}
 
 // ── CONTACT FORM ────────────────────────────────────────
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', async function(e) {
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
     const btn = form.querySelector('.form-btn');
     const btnText = form.querySelector('.form-btn-text');
