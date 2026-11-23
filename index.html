@@ -9,69 +9,43 @@
     gtag('js', new Date());
     gtag('config', 'G-RNF27QBJKP');
   </script>
+  <script>document.documentElement.classList.add('js');</script>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tegan Rogers | Builder. Seller. Developer.</title>
-  <meta name="description" content="Tegan Rogers, Seattle-area full-stack developer, Evergreen Digital co-founder, and #1 ranked Nissan product specialist, open to tech roles. See projects and reviews."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"/>
+  <meta name="theme-color" content="#080808"/>
+  <title>Tegan Rogers | Customer Success, Operations &amp; Product Builder</title>
+  <meta name="description" content="Tegan Rogers: Seattle-area customer success and operations professional, Evergreen Digital co-founder, builder of Grove and Juniper, with 50+ five-star customer reviews. Open to remote and hybrid tech roles."/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://teganrogers.org/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://teganrogers.org/"/>
-  <meta property="og:title" content="Tegan Rogers | Builder. Seller. Developer."/>
-  <meta property="og:description" content="Seattle-area full-stack developer, Evergreen Digital co-founder, and #1 ranked Nissan product specialist, open to tech roles."/>
+  <meta property="og:title" content="Tegan Rogers | Customer Success, Operations &amp; Product Builder"/>
+  <meta property="og:description" content="Co-founder of Evergreen Digital, builder of Grove and Juniper, 50+ five-star customer reviews. Open to remote and hybrid tech roles."/>
   <meta property="og:image" content="https://teganrogers.org/images/og-image.jpg"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
-  <meta property="og:image:alt" content="Tegan Rogers: Builder. Seller. Developer."/>
+  <meta property="og:image:alt" content="Tegan Rogers portfolio"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="https://teganrogers.org/images/og-image.jpg"/>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://teganrogers.org/#person",
-        "name": "Tegan Rogers",
-        "url": "https://teganrogers.org/",
-        "email": "mailto:justTegan7@gmail.com",
-        "jobTitle": "Full-Stack Developer and Co-Founder",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Seattle",
-          "addressRegion": "WA",
-          "addressCountry": "US"
-        },
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Evergreen Digital Co.",
-          "url": "https://www.evergreendigitalco.com/"
-        },
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Everett Community College"
-        },
-        "sameAs": [
-          "https://github.com/JustTegan7",
-          "https://www.linkedin.com/in/tegan-rogers",
-          "https://www.evergreendigitalco.com/"
-        ]
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://teganrogers.org/#service",
-        "name": "Tegan Rogers Web Development",
-        "url": "https://teganrogers.org/",
-        "email": "justTegan7@gmail.com",
-        "founder": { "@id": "https://teganrogers.org/#person" },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Seattle",
-          "addressRegion": "WA",
-          "addressCountry": "US"
-        },
-        "areaServed": ["Seattle, WA", "Snohomish County, WA", "Remote"]
-      }
+    "@type": "Person",
+    "@id": "https://teganrogers.org/#person",
+    "name": "Tegan Rogers",
+    "url": "https://teganrogers.org/",
+    "email": "mailto:justTegan7@gmail.com",
+    "jobTitle": "Co-Founder and Operations Lead",
+    "address": { "@type": "PostalAddress", "addressLocality": "Mill Creek", "addressRegion": "WA", "addressCountry": "US" },
+    "worksFor": { "@type": "Organization", "name": "Evergreen Digital Co.", "url": "https://www.evergreendigitalco.com/" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Everett Community College" },
+    "knowsAbout": ["Customer Success", "Customer Onboarding", "Account Management", "Sales", "React", "TypeScript", "Web Development"],
+    "sameAs": [
+      "https://github.com/JustTegan7",
+      "https://www.linkedin.com/in/tegan-rogers",
+      "https://www.evergreendigitalco.com/",
+      "https://thegrovecms.com/",
+      "https://juniperbooking.com/"
     ]
   }
   </script>
@@ -82,36 +56,36 @@
 </head>
 <body>
 
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
 <!-- NAV -->
-<nav>
+<nav id="siteNav">
   <a href="#hero" class="nav-logo">TR<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#projects">Work</a></li>
     <li><a href="#exp">Experience</a></li>
-    <li><a href="#sales">Sales</a></li>
     <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#edu">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#content">Content</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Open menu">
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
     <span></span><span></span><span></span>
   </button>
-  <a href="#contact" class="nav-cta desktop-only">Hire Me →</a>
+  <a href="Tegan-Rogers-Resume.pdf" class="nav-cta desktop-only" download>Resume ↓</a>
 </nav>
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
   <a href="#about" class="mob-link">About</a>
-  <a href="#skills" class="mob-link">Skills</a>
-  <a href="#projects" class="mob-link">Projects</a>
+  <a href="#projects" class="mob-link">Work</a>
   <a href="#exp" class="mob-link">Experience</a>
-  <a href="#sales" class="mob-link">Sales</a>
   <a href="#testimonials" class="mob-link">Reviews</a>
-  <a href="#edu" class="mob-link">Education</a>
+  <a href="#skills" class="mob-link">Skills</a>
+  <a href="#content" class="mob-link">Content</a>
   <a href="#contact" class="mob-link">Contact</a>
-  <a href="#contact" class="mob-link mob-cta">Hire Me →</a>
+  <a href="Tegan-Rogers-Resume.pdf" class="mob-link mob-cta" download>Download Resume ↓</a>
 </div>
 
 <!-- HERO -->
@@ -119,20 +93,20 @@
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
-  <div class="hero-eyebrow">Tech Sales · Developer · Seattle, WA</div>
+  <div class="hero-eyebrow">Customer Success · Operations · Builder · Seattle, WA</div>
   <h1 class="hero-name">TEGAN<br><span class="acc">ROGERS</span></h1>
-  <p class="hero-sub"><strong>Builder. Seller. Developer.</strong><br>I build web products, run operations for a growing web agency, and sell at the top of my team. Now I'm bringing all three to a role in tech.</p>
+  <p class="hero-sub"><strong>I build relationships, and the tools that run them.</strong><br>I co-founded a subscription web agency, launched two software products, and earned 50+ five-star reviews helping customers through one of the biggest purchases of their lives. Now I'm bringing all of it to a customer-facing role in tech.</p>
   <div class="hero-badges">
-    <span class="badge hot">Full-Stack Developer</span>
+    <span class="badge hot">Customer Success &amp; Ops</span>
     <span class="badge hot">Agency Co-Founder</span>
-    <span class="badge">#1 Ranked in Sales</span>
-    <span class="badge">B.S. CS In Progress</span>
-    <span class="badge grn">Open to Tech Roles</span>
+    <span class="badge">Builder of Grove &amp; Juniper</span>
+    <span class="badge">50+ Five-Star Reviews</span>
+    <span class="badge grn">Open to Remote &amp; Hybrid Roles</span>
   </div>
   <div class="hero-ctas">
     <a href="#projects" class="btn-p">View My Work ↓</a>
-    <a href="https://github.com/JustTegan7" target="_blank" class="btn-s">⟨/⟩ GitHub</a>
-    <a href="https://www.linkedin.com/in/tegan-rogers" target="_blank" class="btn-s">in LinkedIn</a>
+    <a href="Tegan-Rogers-Resume.pdf" class="btn-s" download>Download Resume</a>
+    <a href="https://www.linkedin.com/in/tegan-rogers" target="_blank" rel="noopener" class="btn-s">in LinkedIn</a>
   </div>
   <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
@@ -140,17 +114,17 @@
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-inner">
-    <span>Full-Stack Development</span><span>JavaScript</span><span>C++</span><span>Client Delivery</span><span>Sales &amp; Closing</span><span>Business Founder</span><span>SEO &amp; Web Design</span><span>Problem Solver</span><span>React &amp; Node.js</span><span>Product Specialist</span><span>Leadership</span><span>Seattle WA</span>
-    <span>Full-Stack Development</span><span>JavaScript</span><span>C++</span><span>Client Delivery</span><span>Sales &amp; Closing</span><span>Business Founder</span><span>SEO &amp; Web Design</span><span>Problem Solver</span><span>React &amp; Node.js</span><span>Product Specialist</span><span>Leadership</span><span>Seattle WA</span>
+    <span>Customer Success</span><span>Client Onboarding</span><span>Account Management</span><span>Team Leadership</span><span>Training</span><span>Sales &amp; Closing</span><span>Product Builder</span><span>React &amp; TypeScript</span><span>Process Building</span><span>Agency Co-Founder</span><span>Seattle, WA</span>
+    <span>Customer Success</span><span>Client Onboarding</span><span>Account Management</span><span>Team Leadership</span><span>Training</span><span>Sales &amp; Closing</span><span>Product Builder</span><span>React &amp; TypeScript</span><span>Process Building</span><span>Agency Co-Founder</span><span>Seattle, WA</span>
   </div>
 </div>
 
-<!-- STAT BAR -->
+<!-- STAT BAR (real numbers are in the HTML; JS only animates up to them) -->
 <div class="stat-bar">
-  <div class="stat reveal"><span class="stat-num" data-target="3">0</span><span class="stat-label">Years Industry Experience</span></div>
-  <div class="stat reveal d1"><span class="stat-num" data-target="3">0</span><span class="stat-label">Live Client Websites</span></div>
-  <div class="stat reveal d2"><span class="stat-num" data-target="1">0</span><span class="stat-label">Agency Co-Founded &amp; Running</span></div>
-  <div class="stat reveal d3"><span class="stat-num" style="font-size:2.2rem;line-height:1.2">B.S.</span><span class="stat-label">Computer Science In Progress</span></div>
+  <div class="stat reveal"><span class="stat-num" data-target="15" data-suffix="+">15+</span><span class="stat-label">Cars Sold per Month (Best: 24)</span></div>
+  <div class="stat reveal d1"><span class="stat-num" data-target="50" data-suffix="+">50+</span><span class="stat-label">Five-Star Customer Reviews</span></div>
+  <div class="stat reveal d2"><span class="stat-num" data-target="2">2</span><span class="stat-label">Software Products Launched</span></div>
+  <div class="stat reveal d3"><span class="stat-num" data-target="1">1</span><span class="stat-label">Agency Co-Founded &amp; Running</span></div>
 </div>
 
 <!-- ABOUT -->
@@ -158,67 +132,31 @@
   <div class="inner">
     <div class="about-text reveal">
       <div class="eyebrow">About Me</div>
-      <h2>I Don't Just Learn It.<br><span class="acc">I Build It.</span></h2>
-      <p style="margin-top:1.5rem">I'm <strong>Tegan Rogers</strong>, a developer and salesperson working toward my B.S. in Computer Science. I co-founded <em>Evergreen Digital</em>, a subscription web agency for local businesses across Snohomish County and the Seattle area, where I lead operations.</p>
-      <p>My path didn't start behind a keyboard. I spent 2.5 years in the restaurant industry, working my way from server to <strong>bartender to shift lead</strong> and learning how to read people, stay calm under pressure, and make every interaction count. That took me to <strong>Nissan of Everett</strong>, where I've spent over a year as a Product Specialist, guiding customers through one of the biggest purchases of their lives.</p>
-      <p>Now I'm bringing both worlds into tech. I can sit across the table from a customer, understand what they actually need, and then go build it or explain exactly how it works. That's what I bring to a tech team, whether the role is sales, customer success, solutions, or development.</p>
+      <h2>People First.<br><span class="acc">Then I Build It.</span></h2>
+      <p style="margin-top:1.5rem">I'm <strong>Tegan Rogers</strong>. I co-founded <em>Evergreen Digital</em>, a subscription web agency for local businesses in Snohomish County and the Seattle area, where I lead operations and client onboarding. I also designed and launched our two software products, <strong>Grove</strong> and <strong>Juniper</strong>.</p>
+      <p>My path started with people. I led front-end project teams as a <strong>Team Lead intern at Super Purposes</strong>, then spent almost two years as a <strong>Closing Supervisor at Blazing Onion</strong>, running the closing team and building a base of regulars behind the bar. Since March 2025 I've been a <strong>Product Specialist at Nissan of Everett</strong>, owning every deal from first conversation to financing to the questions that come up months later.</p>
+      <p>That's the job I want next: helping customers get real value from great software. I can sit across from a customer, understand what they actually need, and then explain exactly how the product solves it, or go build the fix myself. Customer success, account management, implementation, or solutions, I'm ready.</p>
       <div class="about-ctas">
-        <a href="https://github.com/JustTegan7" target="_blank" class="btn-p">⟨/⟩ GitHub</a>
-        <a href="https://www.linkedin.com/in/tegan-rogers" target="_blank" class="btn-s">in LinkedIn</a>
-        <a href="https://evergreendigitalco.com" target="_blank" class="btn-s">🌿 My Agency</a>
+        <a href="Tegan-Rogers-Resume.pdf" class="btn-p" download>Download Resume ↓</a>
+        <a href="https://www.linkedin.com/in/tegan-rogers" target="_blank" rel="noopener" class="btn-s">in LinkedIn</a>
+        <a href="https://github.com/JustTegan7" target="_blank" rel="noopener" class="btn-s">⟨/⟩ GitHub</a>
       </div>
     </div>
     <div class="about-cards">
       <div class="acard reveal d1">
-        <div class="acard-icon">💻</div>
-        <h4>Full-Stack Developer</h4>
-        <p>Building complete web applications end to end, from design to deployment, for paying clients with real deadlines and real stakes.</p>
+        <div class="acard-icon">🤝</div>
+        <h4>Customer Relationships</h4>
+        <p>50+ five-star reviews and a steady stream of referrals from building trust before the sale and staying the go-to contact long after it.</p>
       </div>
       <div class="acard reveal d2">
         <div class="acard-icon">🚀</div>
         <h4>Co-Founder, Evergreen Digital</h4>
-        <p>Co-founded a subscription web agency with a three-person team. I run operations: contracts, billing, client onboarding, and site delivery.</p>
+        <p>Built our operations from scratch: client onboarding, contracts and billing, site delivery, and the internal tools that keep a three-person team in sync.</p>
       </div>
       <div class="acard reveal d3">
-        <div class="acard-icon">🤝</div>
-        <h4>Product Specialist, Nissan of Everett</h4>
-        <p>1+ year guiding customers through high-ticket vehicle purchases. Expert at identifying needs, building trust, and closing confidently.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="inner">
-    <div class="eyebrow reveal">Capabilities</div>
-    <h2 class="reveal">My <span class="acc">Skill</span> Stack</h2>
-    <p class="lead reveal">Half computer scientist, half sales professional. Both sides actually useful.</p>
-    <div class="skills-grid">
-      <div class="reveal d1">
-        <div class="scol-head">Technical Skills</div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">JavaScript</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Full-Stack Web Apps</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">C++</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Web Architecture &amp; SEO</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill" data-w="78"></div></div></div>
-        <div class="tags">
-          <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Git / GitHub</span>
-          <span class="tag">REST APIs</span><span class="tag">Responsive Design</span><span class="tag">SEO</span>
-          <span class="tag">Client Deployment</span><span class="tag">Booking Integration</span>
-        </div>
-      </div>
-      <div class="reveal d2">
-        <div class="scol-head">Business &amp; People Skills</div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Sales &amp; Closing</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Client Communication</span><span class="skill-pct">95%</span></div><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Project Management</span><span class="skill-pct">82%</span></div><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Leadership &amp; Team Management</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
-        <div class="skill-item"><div class="skill-top"><span class="skill-name">Self-Motivation &amp; Drive</span><span class="skill-pct">100%</span></div><div class="skill-bar"><div class="skill-fill" data-w="100"></div></div></div>
-        <div class="tags">
-          <span class="tag b">Negotiation</span><span class="tag b">Business Dev</span><span class="tag b">Entrepreneurship</span>
-          <span class="tag b">Customer Success</span><span class="tag b">Conflict Resolution</span><span class="tag b">Prospecting</span>
-        </div>
+        <div class="acard-icon">🧭</div>
+        <h4>Quick Leader &amp; Trainer</h4>
+        <p>Led project teams, supervised closing crews, and trained new hires. I step up, set the process, and get people moving in the same direction.</p>
       </div>
     </div>
   </div>
@@ -229,74 +167,88 @@
   <div class="inner">
     <div class="eyebrow reveal">Featured Work</div>
     <h2 class="reveal">Products I've <span class="acc">Built</span></h2>
-    <p class="lead reveal">Not school assignments. Real products for real clients, plus the apps I'm building now.</p>
+    <p class="lead reveal">Real products running real businesses. Built to solve problems I saw firsthand working with customers.</p>
     <div class="proj-grid">
 
       <div class="pcard full reveal">
         <div class="pimg-wrap">
-          <img src="images/evergreen.jpg" alt="Evergreen Digital website" class="pimg"/>
+          <img src="images/evergreen.jpg" alt="Evergreen Digital website" class="pimg" loading="lazy"/>
         </div>
         <div class="pbody">
-          <div class="pmeta"><div class="pdot"></div><span>Co-Founder &amp; Operations Lead</span><span>·</span><span>2026–Present</span></div>
+          <div class="pmeta"><div class="pdot"></div><span>Co-Founder &amp; Operations Lead</span><span>·</span><span>Sep 2026–Present</span></div>
           <h3>Evergreen Digital, My Web Agency</h3>
-          <p>Co-founded a subscription web agency for local businesses in Snohomish County and the Seattle area. I lead operations and help build client sites: discovery calls, proposals, contracts and billing, custom design and development, SEO, and monthly care plans. The agency site itself is a live showcase built to convert.</p>
+          <p>A subscription web agency for local businesses: one monthly price for a professional website, hosting, and ongoing support. I run operations end to end, from discovery calls and proposals to contracts, billing, onboarding, site delivery, and the monthly care that keeps clients around.</p>
           <div class="ptechs">
-            <span class="ptech">Full-Stack JS</span><span class="ptech">HTML/CSS</span><span class="ptech">SEO</span>
-            <span class="ptech">Client Management</span><span class="ptech">Business Development</span><span class="ptech">Copywriting</span>
+            <span class="ptech">Client Onboarding</span><span class="ptech">Operations</span><span class="ptech">Retention</span>
+            <span class="ptech">Web Development</span><span class="ptech">SEO</span><span class="ptech">Business Development</span>
           </div>
           <div class="plinks">
-            <a href="https://evergreendigitalco.com" target="_blank" class="plink">Visit Live Site →</a>
+            <a href="https://evergreendigitalco.com" target="_blank" rel="noopener" class="plink">Visit Live Site →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pcard concept reveal d1">
+        <div class="pconcept-head grove">
+          <span class="pconcept-icon">🌲</span>
+          <span class="pconcept-status live">● Live</span>
+        </div>
+        <div class="pbody">
+          <div class="pmeta"><div class="pdot"></div><span>Product · Evergreen Digital</span><span>·</span><span>2026</span></div>
+          <h3>Grove: A CRM With Nothing in the Way</h3>
+          <p>A CRM for small sales teams that want to stay organized without the clutter. I designed and built it, then moved our team's live lead tracker into it. Evergreen now runs its entire pipeline on Grove every day.</p>
+          <ul class="pfeatures">
+            <li>Lead pipeline from first contact to client, with owner assignment and notes</li>
+            <li>Automated day 1, 3, 5, 10 and 14 follow-up cadence and a daily task list</li>
+            <li>Full business profiles: contacts, socials, plan tier, and launch details</li>
+          </ul>
+          <div class="ptechs">
+            <span class="ptech">React</span><span class="ptech">TypeScript</span><span class="ptech">Vite</span>
+            <span class="ptech">Supabase</span><span class="ptech">Vercel</span>
+          </div>
+          <div class="plinks">
+            <a href="https://thegrovecms.com" target="_blank" rel="noopener" class="plink">Visit Grove →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pcard concept reveal d2">
+        <div class="pconcept-head juniper">
+          <span class="pconcept-icon">🫐</span>
+          <span class="pconcept-status live">● Live</span>
+        </div>
+        <div class="pbody">
+          <div class="pmeta"><div class="pdot"></div><span>Product · Evergreen Digital</span><span>·</span><span>2026</span></div>
+          <h3>Juniper: Booking, Staff &amp; Inventory</h3>
+          <p>An all-in-one platform for small businesses to run bookings, staff, and inventory in one place. I took it from idea to live launch, and it's now being set up as the storefront and inventory system for a retail client.</p>
+          <ul class="pfeatures">
+            <li>Online client booking with email reminders</li>
+            <li>Staff portal for shift schedules, time off, and timesheets</li>
+            <li>Storefront, inventory, and in-person payment integration</li>
+          </ul>
+          <div class="ptechs">
+            <span class="ptech">React</span><span class="ptech">TypeScript</span><span class="ptech">Neon</span>
+            <span class="ptech">Vercel</span><span class="ptech">Implementation</span>
+          </div>
+          <div class="plinks">
+            <a href="https://juniperbooking.com" target="_blank" rel="noopener" class="plink">Visit Juniper →</a>
           </div>
         </div>
       </div>
 
       <div class="pcard reveal d1">
         <div class="pimg-wrap">
-          <img src="images/barclay.png" alt="Barclay's Salon website" class="pimg"/>
+          <img src="images/barclay.png" alt="Salon website redesign concept" class="pimg" loading="lazy"/>
         </div>
         <div class="pbody">
-          <div class="pmeta"><div class="pdot"></div><span>Client Project · Evergreen Digital</span><span>·</span><span>Everett, WA</span></div>
-          <h3>Barclay's Salon: Full Website Redesign</h3>
-          <p>Complete redesign for a family-owned Redken Club 5th Avenue salon in Everett, WA, trusted in the community since 1977. Delivered a modern, mobile-first site with clear pricing, one-tap booking, a before-and-after gallery built from the salon's own client work, and local SEO.</p>
+          <div class="pmeta"><div class="pdot"></div><span>Redesign Concept · Evergreen Digital</span><span>·</span><span>Everett, WA</span></div>
+          <h3>Salon Website Redesign Concept</h3>
+          <p>A full redesign concept built as a pitch for a long-running local salon: a modern, mobile-first site with clear pricing, one-tap booking, a before-and-after gallery, and local SEO. A good example of how I scope a client's needs before anything is signed.</p>
           <div class="ptechs">
-            <span class="ptech">Web Design</span><span class="ptech">JavaScript</span><span class="ptech">Mobile-First</span>
-            <span class="ptech">Booking System</span><span class="ptech">Local SEO</span>
+            <span class="ptech">Discovery</span><span class="ptech">Web Design</span><span class="ptech">Mobile-First</span><span class="ptech">Local SEO</span>
           </div>
           <div class="plinks">
-            <a href="https://www.barclaysalon.com/" target="_blank" rel="noopener" class="plink">Visit Live Site →</a>
-            <a href="https://evergreendigitalco.com" target="_blank" class="plink sec">View Agency →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="pcard concept reveal d2">
-        <div class="pconcept-head">
-          <span class="pconcept-icon">🌲</span>
-          <span class="pconcept-status">In Development</span>
-        </div>
-        <div class="pbody">
-          <div class="pmeta"><div class="pdot"></div><span>Product · Evergreen Digital</span><span>·</span><span>2026</span></div>
-          <h3>Grove CRM: Sales Pipeline App</h3>
-          <p>A cloud-synced CRM built for our agency team, so everyone sees the same leads and clients. Tracks each lead through a seven-stage pipeline with an automated day 1, 3, 5, 10 and 14 follow-up cadence, owner assignment, and full business profiles. Web first, with a mobile app planned off the same codebase.</p>
-          <div class="ptechs">
-            <span class="ptech">React</span><span class="ptech">TypeScript</span><span class="ptech">Vite</span>
-            <span class="ptech">Supabase</span><span class="ptech">Capacitor</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pcard concept reveal d1">
-        <div class="pconcept-head">
-          <span class="pconcept-icon">🩺</span>
-          <span class="pconcept-status">Spec &amp; Design Complete</span>
-        </div>
-        <div class="pbody">
-          <div class="pmeta"><div class="pdot"></div><span>Mobile App</span><span>·</span><span>iOS &amp; Android</span><span>·</span><span>2026</span></div>
-          <h3>MediSnap: Skin Intake App</h3>
-          <p>A photo-based skin intake app that helps patients describe a skin concern and generates a clear report for their doctor. Built doctor-in-the-loop, so a clinician makes the call, and private by design: no accounts, and data stays on the phone. Health record connections are planned as a stretch goal.</p>
-          <div class="ptechs">
-            <span class="ptech">Mobile</span><span class="ptech">Image Capture</span><span class="ptech">Health Records</span>
-            <span class="ptech">Privacy by Design</span><span class="ptech">Product Spec</span>
+            <a href="https://barclay-salon.vercel.app" target="_blank" rel="noopener" class="plink">View Concept →</a>
           </div>
         </div>
       </div>
@@ -304,9 +256,9 @@
       <div class="pcard-ghost reveal d2">
         <div class="pcard-ghost-inner">
           <div class="gi">⟨/⟩</div>
-          <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;margin-bottom:.5rem;">More Projects on GitHub</h3>
-          <p style="font-size:.82rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.5;">Class projects, personal experiments,<br>and ongoing builds in the wild.</p>
-          <a href="https://github.com/JustTegan7" target="_blank" class="btn-p" style="font-size:.75rem;margin:0 auto;">JustTegan7 on GitHub →</a>
+          <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;margin-bottom:.5rem;">More on GitHub</h3>
+          <p style="font-size:.82rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.5;">Client sites, templates,<br>and the code behind Grove and Juniper.</p>
+          <a href="https://github.com/JustTegan7" target="_blank" rel="noopener" class="btn-p" style="font-size:.75rem;margin:0 auto;">JustTegan7 on GitHub →</a>
         </div>
       </div>
 
@@ -322,161 +274,57 @@
     <div class="exp-grid">
 
       <div class="ecard active reveal">
-        <div class="eh"><span class="etitle">Co-Founder &amp; Operations Lead</span><span class="edate">2026–Present</span></div>
+        <div class="eh"><span class="etitle">Co-Founder &amp; Operations Lead</span><span class="edate">Sep 2026–Present</span></div>
         <span class="ecompany">Evergreen Digital · Mill Creek, WA</span>
-        <p class="edesc">Co-founded a subscription web agency with a three-person team. I own operations: contracts, billing, client onboarding, project delivery, and post-launch support.</p>
+        <p class="edesc">Co-founded a subscription web agency with two partners. I own operations: onboarding, contracts, billing, delivery, and post-launch support.</p>
         <ul class="ebullets">
-          <li>Helped land the agency's first three recurring clients</li>
-          <li>Built the legal and billing backbone: master agreements, e-sign workflow, recurring billing</li>
-          <li>Shipped client sites, including Barclay's Salon, live at barclaysalon.com</li>
-          <li>Built internal tools, including a website audit tool and a lead CRM</li>
+          <li>Built operations, client onboarding, and delivery processes from scratch</li>
+          <li>Built the billing and agreement backbone: master agreements, e-sign workflow, recurring billing</li>
+          <li>Designed and launched Grove (CRM) and Juniper (booking, staff, and inventory)</li>
+          <li>Lead discovery and prospecting with local businesses, turning needs into solutions</li>
         </ul>
       </div>
 
       <div class="ecard reveal d1">
-        <div class="eh"><span class="etitle">Product Specialist</span><span class="edate">2025–Present</span></div>
+        <div class="eh"><span class="etitle">Product Specialist</span><span class="edate">Mar 2025–Present</span></div>
         <span class="ecompany">Nissan of Everett · Everett, WA</span>
-        <p class="edesc">Guide customers through the full vehicle purchase journey at one of the region's top Nissan dealerships, from first conversation to keys in hand.</p>
+        <p class="edesc">Own every deal start to finish, from first conversation through financing, add-on products, delivery, and the follow-up after.</p>
         <div class="emetric-row">
           <div class="emetric"><span class="emetric-num">15+</span><span class="emetric-label">Cars / Month</span></div>
+          <div class="emetric"><span class="emetric-num">50+</span><span class="emetric-label">5-Star Reviews</span></div>
           <div class="emetric"><span class="emetric-num">#1</span><span class="emetric-label">Team Ranking</span></div>
-          <div class="emetric"><span class="emetric-num">High</span><span class="emetric-label">CSI Score</span></div>
         </div>
         <ul class="ebullets">
-          <li>Consistently sells <strong>15+ vehicles per month</strong>, ranked <strong>#1 on the sales team</strong></li>
-          <li>Guided customers from initial inquiry through financing, trade-in, and delivery</li>
-          <li>Built repeat and referral pipeline by prioritizing long-term trust over single transactions</li>
-          <li>Consistently ranked among top performers on the floor</li>
+          <li>Average <strong>15+ vehicles a month</strong>, best month 24</li>
+          <li>Build trust before the sale and stay the go-to contact after it</li>
+          <li>Steady stream of referrals from past customers</li>
+          <li>Explain complex financing in plain language to every kind of customer</li>
         </ul>
       </div>
 
       <div class="ecard reveal d2">
-        <div class="eh"><span class="etitle">Shift Lead &amp; Bartender</span><span class="edate">2022–2025</span></div>
-        <span class="ecompany">Restaurant Industry · 2.5 Years</span>
-        <p class="edesc">Advanced from server to bartender to shift lead. Managed teams, drove service quality, and led high-volume floor operations under pressure.</p>
+        <div class="eh"><span class="etitle">Closing Supervisor</span><span class="edate">Jul 2023–Mar 2025</span></div>
+        <span class="ecompany">Blazing Onion · Mill Creek &amp; Snohomish, WA</span>
+        <p class="edesc">Ran the closing team for a busy full-service restaurant and bar.</p>
         <ul class="ebullets">
-          <li>Led and coordinated staff as Shift Lead for full-service shifts</li>
-          <li>Ran high-volume bar service with consistent quality &amp; speed</li>
-          <li>Trained new team members on service and safety standards</li>
-          <li>Developed strong conflict resolution and people-reading skills</li>
+          <li>Supervised the closing crew, delegating tasks and managing breaks</li>
+          <li>Handled cash reconciliation and nightly reports to corporate</li>
+          <li>Trained and onboarded new team members</li>
+          <li>Built a loyal base of regulars with fast, attentive service</li>
         </ul>
       </div>
 
       <div class="ecard reveal d3">
-        <div class="eh"><span class="etitle">CS Student &amp; Self-Directed Builder</span><span class="edate">Ongoing</span></div>
-        <span class="ecompany">University · Bachelor's in Computer Science</span>
-        <p class="edesc">Pursuing a B.S. in CS while running a business. Everything learned in the classroom gets validated in production projects with real clients.</p>
+        <div class="eh"><span class="etitle">Team Lead (Internship)</span><span class="edate">Oct 2021–Apr 2023</span></div>
+        <span class="ecompany">Super Purposes · Remote</span>
+        <p class="edesc">Front-end development internship building websites for real clients and companies.</p>
         <ul class="ebullets">
-          <li>Formal coursework: C++ and JavaScript</li>
-          <li>Self-taught: React, Node.js, full-stack architecture</li>
-          <li>Applied concepts directly in live client deployments</li>
-          <li>A.S. in Computer Science from Everett Community College</li>
+          <li>Led multiple project teams, distributing assignments and deadlines</li>
+          <li>Trained newer team members to deliver on time</li>
+          <li>Worked across teams to turn client requirements into launched sites</li>
         </ul>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- SALES PHILOSOPHY -->
-<section id="sales">
-  <div class="inner">
-    <div class="eyebrow reveal">Sales Philosophy</div>
-    <h2 class="reveal">How I <span class="acc">Sell</span></h2>
-    <p class="lead reveal">The approach that drives 15+ cars a month, and why it carries over to tech sales.</p>
-    <div class="phil-grid">
-      <div class="phil-quote reveal d1">
-        <div class="quote-mark">"</div>
-        <blockquote>People don't want to be sold to. They want someone who listens, understands what they actually need, and guides them to a decision they feel confident about. That's not a sales tactic. It's just respect. And it's what makes customers come back and send their friends.</blockquote>
-        <div class="quote-attr">Tegan Rogers, Product Specialist</div>
-      </div>
-      <div class="phil-pillars reveal d2">
-        <div class="pillar">
-          <div class="pillar-num">01</div>
-          <div class="pillar-body">
-            <h4>Comfort Before Commitment</h4>
-            <p>A tense customer is a customer who walks. I lead with real conversation, with no pressure and no scripts, until they feel like they're talking to someone on their side.</p>
-          </div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">02</div>
-          <div class="pillar-body">
-            <h4>Understand Before You Pitch</h4>
-            <p>I ask more questions than I give answers. Knowing someone's commute, their family size, their budget worries: that's what lets me recommend the right vehicle instead of the most expensive one.</p>
-          </div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">03</div>
-          <div class="pillar-body">
-            <h4>Guide, Don't Push</h4>
-            <p>My job isn't to close the deal. It's to remove every reason not to. When a customer genuinely believes they're making the right choice, the close takes care of itself.</p>
-          </div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">04</div>
-          <div class="pillar-body">
-            <h4>The Sale Isn't the Finish Line</h4>
-            <p>Every customer is a long-term relationship. The referrals, the reviews, the repeat buyers: those come from the experience I gave them, not the paperwork they signed.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sales-stats reveal d3">
-      <div class="ss-item"><span class="ss-num">15+</span><span class="ss-label">Units Sold / Month</span></div>
-      <div class="ss-divider"></div>
-      <div class="ss-item"><span class="ss-num">#1</span><span class="ss-label">Ranked on Sales Team</span></div>
-      <div class="ss-divider"></div>
-      <div class="ss-item"><span class="ss-num">100%</span><span class="ss-label">Consultative Sales Approach</span></div>
-      <div class="ss-divider"></div>
-      <div class="ss-item"><span class="ss-num">∞</span><span class="ss-label">Referrals Driven by Trust</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="edu">
-  <div class="inner">
-    <div class="eyebrow reveal">Education</div>
-    <h2 class="reveal">Academic <span class="acc">Foundation</span></h2>
-    <div class="edu-grid">
-      <div class="educ reveal d1">
-        <div class="educ-icon">🎓</div>
-        <div class="educ-deg">Bachelor of Science, Computer Science</div>
-        <div class="educ-school">University · In Progress</div>
-        <span class="educ-badge" style="background:rgba(74,158,255,.08);border-color:rgba(74,158,255,.25);color:var(--blue)">⚡ In Progress</span>
-      </div>
-      <div class="educ reveal d2">
-        <div class="educ-icon">📜</div>
-        <div class="educ-deg">Associate of Science, Computer Science</div>
-        <div class="educ-school">Everett Community College · 2024</div>
-        <span class="educ-badge">✓ Completed</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY TEGAN -->
-<section id="value">
-  <div class="inner">
-    <div class="eyebrow reveal">Why Tegan</div>
-    <h2 class="reveal">What I <span class="acc">Actually</span> Bring</h2>
-    <p class="lead reveal">Beyond the bullet points on a resume.</p>
-    <div class="val-grid">
-      <div class="vcard reveal d1">
-        <div class="vcard-icon">🔨</div>
-        <h3>I Ship Real Products</h3>
-        <p>My portfolio isn't class projects. I've built full-stack applications for paying clients that are live on the internet right now, with real users, real results, and real accountability.</p>
-      </div>
-      <div class="vcard reveal d2">
-        <div class="vcard-icon">🧠</div>
-        <h3>Technical + Commercial Mind</h3>
-        <p>Most devs can't sell. Most salespeople can't build. I do both, which means I add value in technical conversations and customer-facing ones. That's a rare combination.</p>
-      </div>
-      <div class="vcard reveal d3">
-        <div class="vcard-icon">⚡</div>
-        <h3>Relentlessly Self-Driven</h3>
-        <p>Running a business while in school while working in sales proves I don't wait for permission to create value. I find the need, learn what's required, and go build the solution.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -487,19 +335,19 @@
     <div class="reviews-header">
       <div>
         <div class="eyebrow reveal">Customer Reviews</div>
-        <h2 class="reveal">What Clients <span class="acc">Say</span></h2>
+        <h2 class="reveal">What Customers <span class="acc">Say</span></h2>
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:1rem;">
         <div class="overall-rating reveal">
-          <span class="rating-num">5.0</span>
+          <span class="rating-num">50+</span>
           <div class="rating-right">
             <span class="stars">★★★★★</span>
-            <span class="rating-label">Average Rating</span>
+            <span class="rating-label">Five-Star Reviews</span>
             <span class="rating-label">DealerRater · Cars.com</span>
           </div>
         </div>
         <div class="reviews-source reveal">
-          <a href="https://www.dealerrater.com/dealer/Nissan-of-Everett-review-21356/" target="_blank">View all reviews on DealerRater →</a>
+          <a href="https://www.dealerrater.com/dealer/Nissan-of-Everett-review-21356/" target="_blank" rel="noopener">View all reviews on DealerRater →</a>
         </div>
       </div>
     </div>
@@ -547,10 +395,149 @@
       <div class="review-card reveal d3" style="background:rgba(75,159,219,.04);border-color:rgba(75,159,219,.2);display:flex;align-items:center;justify-content:center;text-align:center;min-height:200px;">
         <div style="padding:1rem;">
           <div style="font-size:2rem;margin-bottom:.8rem;">⭐</div>
-          <p style="font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:1.2rem;">All reviews are verified purchases from real customers on DealerRater and Cars.com.</p>
-          <a href="https://www.dealerrater.com/dealer/Nissan-of-Everett-review-21356/" target="_blank" class="btn-p" style="font-size:.72rem;justify-content:center;">Read All Reviews →</a>
+          <p style="font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:1.2rem;">Every review is a verified purchase from a real customer on DealerRater and Cars.com.</p>
+          <a href="https://www.dealerrater.com/dealer/Nissan-of-Everett-review-21356/" target="_blank" rel="noopener" class="btn-p" style="font-size:.72rem;justify-content:center;">Read All Reviews →</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW I WORK WITH CUSTOMERS -->
+<section id="sales">
+  <div class="inner">
+    <div class="eyebrow reveal">How I Work</div>
+    <h2 class="reveal">How I Take Care of <span class="acc">Customers</span></h2>
+    <p class="lead reveal">The approach behind 15+ cars a month and 50+ five-star reviews, and exactly how I'd run a book of software customers.</p>
+    <div class="phil-grid">
+      <div class="phil-quote reveal d1">
+        <div class="quote-mark">"</div>
+        <blockquote>People don't want to be sold to. They want someone who listens, understands what they actually need, and helps them make a decision they feel good about. Then they want that person to still pick up the phone a month later. That's what keeps customers and brings in their friends.</blockquote>
+        <div class="quote-attr">Tegan Rogers</div>
+      </div>
+      <div class="phil-pillars reveal d2">
+        <div class="pillar">
+          <div class="pillar-num">01</div>
+          <div class="pillar-body">
+            <h4>Comfort Before Commitment</h4>
+            <p>I lead with real conversation, no pressure and no scripts, until the customer feels like I'm on their side. In software, that's a kickoff call where they actually open up.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">02</div>
+          <div class="pillar-body">
+            <h4>Understand Before You Pitch</h4>
+            <p>I ask more questions than I answer. Knowing their goals and worries lets me recommend what fits, not what's most expensive. That's discovery and success planning.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">03</div>
+          <div class="pillar-body">
+            <h4>Guide, Don't Push</h4>
+            <p>My job is to remove every reason not to move forward. When customers believe in the decision, adoption takes care of itself.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">04</div>
+          <div class="pillar-body">
+            <h4>The Sale Isn't the Finish Line</h4>
+            <p>I follow up, answer day-to-day questions, and check in long after delivery. Referrals, reviews, and renewals come from that experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sales-stats reveal d3">
+      <div class="ss-item"><span class="ss-num">15+</span><span class="ss-label">Cars Sold / Month</span></div>
+      <div class="ss-divider"></div>
+      <div class="ss-item"><span class="ss-num">24</span><span class="ss-label">Best Month</span></div>
+      <div class="ss-divider"></div>
+      <div class="ss-item"><span class="ss-num">50+</span><span class="ss-label">Five-Star Reviews</span></div>
+      <div class="ss-divider"></div>
+      <div class="ss-item"><span class="ss-num">#1</span><span class="ss-label">Ranked on Sales Team</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="inner">
+    <div class="eyebrow reveal">Capabilities</div>
+    <h2 class="reveal">My <span class="acc">Skill</span> Stack</h2>
+    <p class="lead reveal">Half customer person, half builder. Both sides used every day.</p>
+    <div class="skills-grid">
+      <div class="reveal d1">
+        <div class="scol-head">Customer &amp; Leadership</div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Relationship Building</span><span class="skill-pct">95%</span></div><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Customer Onboarding &amp; Training</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Sales &amp; Negotiation</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Team Leadership</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Process Building &amp; Operations</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+        <div class="tags">
+          <span class="tag b">Customer Success</span><span class="tag b">Account Management</span><span class="tag b">Retention</span>
+          <span class="tag b">Discovery</span><span class="tag b">Conflict Resolution</span><span class="tag b">Prospecting</span>
+        </div>
+      </div>
+      <div class="reveal d2">
+        <div class="scol-head">Technical</div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">JavaScript &amp; TypeScript</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">React Web Apps</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">Databases (Supabase, Neon)</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-name">C++</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+        <div class="tags">
+          <span class="tag">Git / GitHub</span><span class="tag">Vercel</span><span class="tag">Linux</span>
+          <span class="tag">SEO</span><span class="tag">CRM Workflows</span><span class="tag">AI Dev Tools</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="edu">
+  <div class="inner">
+    <div class="eyebrow reveal">Education</div>
+    <h2 class="reveal">Academic <span class="acc">Foundation</span></h2>
+    <div class="edu-grid">
+      <div class="educ reveal d1">
+        <div class="educ-icon">📜</div>
+        <div class="educ-deg">Associate's Degree, Computer Science</div>
+        <div class="educ-school">Everett Community College · 2019–2021</div>
+        <span class="educ-badge">✓ Completed</span>
+      </div>
+      <div class="educ reveal d2">
+        <div class="educ-icon">🛠️</div>
+        <div class="educ-deg">Learning by Shipping</div>
+        <div class="educ-school">React, TypeScript, databases, and deployment, learned building Grove, Juniper, and client sites in production</div>
+        <span class="educ-badge" style="background:rgba(74,158,255,.08);border-color:rgba(74,158,255,.25);color:var(--blue)">⚡ Ongoing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section id="content">
+  <div class="inner">
+    <div class="eyebrow reveal">Off the Clock</div>
+    <h2 class="reveal">I Also <span class="acc">Stream</span></h2>
+    <p class="lead reveal">As <strong>just_Tegan</strong>, I stream games and post videos. It's where I practice talking on camera, think on my feet, and build a community from zero.</p>
+    <div class="content-grid">
+      <a href="https://www.twitch.tv/just_tegan" target="_blank" rel="noopener" class="content-card twitch reveal d1">
+        <span class="content-icon" aria-hidden="true">📺</span>
+        <span class="content-body">
+          <span class="content-title">Twitch</span>
+          <span class="content-sub">Live Tuesdays and Saturdays, 9 PM Pacific</span>
+        </span>
+        <span class="content-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="https://www.youtube.com/@just_Tegan" target="_blank" rel="noopener" class="content-card youtube reveal d2">
+        <span class="content-icon" aria-hidden="true">▶️</span>
+        <span class="content-body">
+          <span class="content-title">YouTube</span>
+          <span class="content-sub">Clips, highlights, and full streams</span>
+        </span>
+        <span class="content-arrow" aria-hidden="true">→</span>
+      </a>
     </div>
   </div>
 </section>
@@ -561,18 +548,18 @@
     <div class="cl reveal">
       <div class="eyebrow">Let's Connect</div>
       <h2>Ready to <span class="acc">Talk?</span></h2>
-      <p>Whether you're a hiring manager, a recruiter, or a business that needs a website, I'm always open to a real conversation.</p>
+      <p>Hiring manager, recruiter, or a business that needs a website: I'm always open to a real conversation.</p>
 
       <form class="contact-form" id="contactForm" action="https://formspree.io/f/xgopwozj" method="POST">
         <h4 class="form-title">Send Me a Message</h4>
         <div class="form-row">
           <div class="form-field">
             <label for="fname">Name</label>
-            <input type="text" id="fname" name="name" placeholder="Your name" required/>
+            <input type="text" id="fname" name="name" placeholder="Your name" autocomplete="name" required/>
           </div>
           <div class="form-field">
             <label for="femail">Email</label>
-            <input type="email" id="femail" name="email" placeholder="your@email.com" required/>
+            <input type="email" id="femail" name="email" placeholder="your@email.com" autocomplete="email" required/>
           </div>
         </div>
         <div class="form-field">
@@ -581,28 +568,28 @@
         </div>
         <div class="form-field">
           <label for="fmessage">Message</label>
-          <textarea id="fmessage" name="message" rows="4" placeholder="Tell me what you're working on..." required></textarea>
+          <textarea id="fmessage" name="message" rows="4" placeholder="Tell me about the role or project..." required></textarea>
         </div>
         <button type="submit" class="form-btn">
           <span class="form-btn-text">Send Message →</span>
           <span class="form-btn-sending" style="display:none">Sending...</span>
         </button>
-        <div class="form-success" id="formSuccess">✓ Message sent! I'll get back to you soon.</div>
-        <div class="form-error" id="formError">Something went wrong. Email me directly at justTegan7@gmail.com</div>
+        <div class="form-success" id="formSuccess" role="status">✓ Message sent! I'll get back to you soon.</div>
+        <div class="form-error" id="formError" role="alert">Something went wrong. Email me directly at justTegan7@gmail.com</div>
       </form>
 
       <div class="clinks" style="margin-top:1.5rem;">
-        <a href="https://github.com/JustTegan7" target="_blank" class="clink">
+        <a href="https://www.linkedin.com/in/tegan-rogers" target="_blank" rel="noopener" class="clink">
+          <div class="clink-icon">in</div>
+          <div class="clink-text"><span class="clink-label">LinkedIn</span><span class="clink-val">linkedin.com/in/tegan-rogers</span></div>
+        </a>
+        <a href="mailto:justTegan7@gmail.com" class="clink">
+          <div class="clink-icon">@</div>
+          <div class="clink-text"><span class="clink-label">Email</span><span class="clink-val">justTegan7@gmail.com</span></div>
+        </a>
+        <a href="https://github.com/JustTegan7" target="_blank" rel="noopener" class="clink">
           <div class="clink-icon" style="font-size:.85rem">⟨/⟩</div>
           <div class="clink-text"><span class="clink-label">GitHub</span><span class="clink-val">github.com/JustTegan7</span></div>
-        </a>
-        <a href="https://www.linkedin.com/in/tegan-rogers" target="_blank" class="clink">
-          <div class="clink-icon">in</div>
-          <div class="clink-text"><span class="clink-label">LinkedIn</span><span class="clink-val">Tegan Rogers</span></div>
-        </a>
-        <a href="https://evergreendigitalco.com" target="_blank" class="clink">
-          <div class="clink-icon">🌿</div>
-          <div class="clink-text"><span class="clink-label">Agency Website</span><span class="clink-val">evergreendigitalco.com</span></div>
         </a>
       </div>
     </div>
@@ -610,19 +597,20 @@
     <div class="cr reveal d2">
       <div class="avail">
         <h4><span class="avail-dot"></span>Currently Available</h4>
-        <p>Open to full-time tech roles: sales, customer success, solutions, development, and IT support. Hybrid preferred, based in the Seattle area.</p>
+        <p>Open to full-time roles in customer success, account management, implementation, and solutions. Remote preferred, hybrid in the Seattle area works too.</p>
+        <a href="Tegan-Rogers-Resume.pdf" class="btn-p" style="margin-top:1.2rem" download>Download Resume ↓</a>
       </div>
       <div class="rbox">
         <h4>Recruiter Quick Facts</h4>
         <ul>
-          <li>B.S. Computer Science in progress</li>
-          <li>A.S. Computer Science, Everett Community College, 2024</li>
-          <li>Co-founder &amp; Operations Lead of a subscription web agency with 3 recurring clients</li>
-          <li>#1 Product Specialist at Nissan of Everett, 15+ cars/month</li>
-          <li>2.5 years leadership experience (shift lead, bartender)</li>
-          <li>Full-stack developer (JavaScript, React, Node.js) who ships client sites</li>
-          <li>Explains technical products in plain language to non-technical buyers</li>
-          <li>Looking for a hybrid role in the Seattle area</li>
+          <li>Co-founder &amp; Operations Lead, Evergreen Digital (subscription web agency)</li>
+          <li>Designed and launched two live products: Grove (CRM) and Juniper (booking, staff, inventory)</li>
+          <li>Product Specialist at Nissan of Everett: 15+ cars/month, best month 24</li>
+          <li>50+ five-star customer reviews and a steady referral pipeline</li>
+          <li>Leadership: Closing Supervisor and Team Lead, training new team members</li>
+          <li>Associate's in Computer Science, Everett Community College</li>
+          <li>Explains technical products in plain language to non-technical customers</li>
+          <li>Remote preferred, hybrid in the Seattle area</li>
         </ul>
       </div>
     </div>
@@ -631,9 +619,9 @@
 
 <footer>
   <span>© 2026 Tegan Rogers. Built by me, obviously.</span>
-  <address style="font-style:normal">Tegan Rogers · Seattle, WA · <a href="mailto:justTegan7@gmail.com">justTegan7@gmail.com</a> · <a href="https://www.evergreendigitalco.com/" target="_blank" rel="noopener">evergreendigitalco.com</a></address>
+  <address style="font-style:normal">Tegan Rogers · Mill Creek, WA · <a href="mailto:justTegan7@gmail.com">justTegan7@gmail.com</a> · <a href="https://evergreendigitalco.com/" target="_blank" rel="noopener">evergreendigitalco.com</a></address>
 </footer>
 
 <script src="js/main.js"></script>
 </body>
-</html>   
+</html>
